@@ -20,6 +20,6 @@ app.post('/image', function(req, res) {
 	res.json({"nodeOutputs": outputArray});
 });
 
-app.listen(3000, function () {
+app.listen(6969, function () {
   console.log('Example app listening on port 3000!');
 });
