@@ -919,7 +919,6 @@ var setupWeightArrays = function() {
 			final_weightsa[i-1][j-1] = (weight - minWeight)/(maxWeight-minWeight);
 		}
 	}
-	
 }
 
 
@@ -1368,9 +1367,24 @@ function maxPool(inputMap, poolSize, inputImageSize) {
 	
 }
 
+function convWeights1a() {
+	return conv_weights_1a;
+}
+
+function convWeights2a() {
+	return conv_weights_2a;
+}
+
+function getKeepers() {
+	return keepers.elements;
+}
+
 module.exports = {
 	setupWeightArrays: setupWeightArrays,
 	getNNOutput: getNNOutput,
-	allNodeOutputs: allNodeOutputs
+	allNodeOutputs: allNodeOutputs, 
+	convWeights1a: convWeights1a,
+	convWeights2a: convWeights2a,
+	keepers: getKeepers
 }
 
