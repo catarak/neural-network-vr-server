@@ -16,6 +16,8 @@ for (var filter = 0; filter < numFilters; filter++) {
 				filterNode.x = 665 - 320*filter + 10*row;
 				filterNode.y = -200;
 				filterNode.z = -135 + 10*column;
+				filterNode.convNode = filter;
+				filterNode.inputNode = 0;
 				filterNodes.push(filterNode);
 		}
 	}
@@ -33,10 +35,11 @@ for (var filterTwo = 0; filterTwo < numFiltersTwo; filterTwo++) {
 				for (var column = 0; column < filterSide; column++) {
 					var filterNode = {};
 					filterNode.value = nn.convWeights2a()[filterTwo][filter][row][column];
-					filterNode.x = 1005 + 10*row - 140*filter;
+					filterNode.x = 735 + 10*row - 320*filter;
 					filterNode.y = 50;
 					filterNode.z = -45 + 10*column;
 					filterNode.convNode = filterTwo;
+					filterNode.inputNode = filter;
 					filterTwoNodes.push(filterNode);
 				}
 			}
