@@ -1379,12 +1379,22 @@ function getKeepers() {
 	return keepers.elements;
 }
 
+function hiddenWeights1() {
+	return hidden_weights_1;
+}
+
+function hiddenWeights2() {
+	return hidden_weights_2;
+}
+
 module.exports = {
 	setupWeightArrays: setupWeightArrays,
 	getNNOutput: getNNOutput,
 	allNodeOutputs: allNodeOutputs, 
 	convWeights1a: convWeights1a,
 	convWeights2a: convWeights2a,
-	keepers: getKeepers
+	keepers: getKeepers,
+	hiddenWeights1: hiddenWeights1,
+	hiddenWeights2: hiddenWeights2
 }
 

@@ -1,0 +1,29 @@
+Script for VR Neural Network
+
+You are about to enter a convolutional neural network, a type of machine learning algorithm. What are machine learning algorithms? They take a lot of data, and find patterns in that data, and then use those stored patterns for other tasks. In this case, the convolutional neural network has been trained on a set of hand-drawn numbers. If you input a hand-drawn number to this algorithm, it can figure out what the digit is. 
+
+Let's dive into the neural network.
+
+First, you need to draw a number. Hold up your hand, and hold out your index finger. When you're finished, open your hand. Try it a few times. Now, draw a number. 
+
+When you're happy with the number you've drawn, put your hand into a thumbs up to input it to the algorithm. 
+
+The neural network doesn't understand what an image is, so it's converted into a matrix of numbers. If you touch the cubes, you can see the number that each one represents. This layer is called the input layer. The neural network is divided into a series of layers, each  serves a different function. Each layer is divided into neurons, each of which is represented by a cube. Put your hand into a thumbs up to move between layers.
+
+The input layer is now to your left, and the next layer to your right is called a convolutional layer. Each layer within this layer, called a kernel, has a filter which it drags across the whole input to extract certain features. Each filter is optimized to extract different features. In the convolutional layer, the parts that are activated, or bright, are the features that are extracted, for example, a line or a curve. Try dragging the input matrix, and you can see how it is connected to the convolutional layer. 
+
+This layer is a downsampling layer, in which the extracted features are reduced to the most prominent ones. Every four neurons, it takes the most activated one, and outputs that to the next layer. The plane in the middle represents the downsampling action, which takes as input four cubes and outputs one, the most activated cube.
+
+This layer is another convolutional layer. In this case, many kernels from the last layer are combined, which allows the neural network to find new features that are combinations of previous discovered features. These are usually called high level features. 
+
+Next, another downsampling layer. 
+
+This next layer is called a fully-connected layer. Each neuron in this layer is connected to every neuron of the last layer. Instead of features being represented by a group of neurons, as was the case in the first convolutional layer, they are represented by a single neurons. The ones that are active will affect the final output.
+
+Another fully-connected layer, which has fewer neurons than the last, designed to find the most prominent features, and adjust for features that are more important than others, even if they are more prominent. 
+
+Lastly, the output layer. Since there are 10 digits, there are ten outputs. The most active neuron is the guess of the neural network, the number that it thinks that you drew. 
+
+Now, let's look at the whole neural network. You can draw numbers in space, as you did before, and see what the algorithm thinks you drew. 
+
+Don't forget, put your hand into a thumbs up to move between layers.
