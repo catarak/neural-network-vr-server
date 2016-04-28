@@ -49,3 +49,29 @@ for (var filterTwo = 0; filterTwo < numFiltersTwo; filterTwo++) {
 
 
 fs.writeFile('filter2_positions.json', JSON.stringify(filterTwoNodes), function(err) {});
+
+var hidden1 = nn.hiddenWeights1().toArray();
+var rows = nn.hiddenWeights1().dimensions().rows;
+var columns = nn.hiddenWeights1().dimensions().cols;
+
+for (var i = 0; i < rows; i++) {
+	hidden1[i] = {"column": hidden1[i]};
+}
+var hidden1Json = {"weights": hidden1};
+
+fs.writeFile('hidden_weights_1.json', JSON.stringify(hidden1Json), function(err) {});
+
+
+var hidden2 = nn.hiddenWeights2().toArray();
+rows = nn.hiddenWeights2().dimensions().rows;
+columns = nn.hiddenWeights2().dimensions().cols;
+
+for (var i = 0; i < rows; i++) {
+	hidden2[i] = {"column": hidden2[i]};
+}
+var hidden2Json = {"weights": hidden2};
+
+fs.writeFile('hidden_weights_2.json', JSON.stringify(hidden2Json), function(err) {});
+
+
+
